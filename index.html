@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seeds Garden</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seeds Garden</title>
+  <link rel="stylesheet" href="Styling.css">
 </head>
 <body>
-    <h1 style="color:aqua">Welcome to Seeds Garden</h1>
-    <p>Your one-stop shop for all kinds of seeds!</p>
+  <h1>Welcome to Seeds Garden</h1>
+  <p>Please enter your info</p>
+
+  <div class="card">
+    <h2 style="color:rgb(5, 170, 101)">Login To Your Account</h2>
+    <p>Please enter your Login Info</p>
+
+    <form action="login.php" method="post">
+      <label for="username"><b>Username:</b></label>
+      <input class="input" type="text" id="username" name="username" required>
+
+      <label for="password"><b>Password:</b></label>
+      <input class="input" type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login" class="button">
+    </form>
+
+    <p>Don't have an account? <a href="signup.html" class="link">Signup</a></p>
+  </div>
 </body>
 </html>

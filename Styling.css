@@ -1,0 +1,81 @@
+/* Basic reset for box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Page background and base font */
+body {
+  background-color: rgb(161, 255, 177);
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px 10px;
+  color: #063;
+  text-align: center; /* centers headings and paragraphs outside the card */
+}
+
+/* White card that holds the form (the "box" concept) */
+.card {
+  background-color: #ffffff;
+  width: 320px;         /* fixed width so it looks neat */
+  margin: 20px auto;    /* centers the card horizontally */
+  padding: 18px;        /* inner spacing (content won't touch the border) */
+  border-radius: 10px;  /* rounded corners for nicer look */
+  border: 1px solid rgba(0,0,0,0.06);
+  text-align: left;     /* make labels and inputs left-aligned inside the card */
+}
+
+/* Headings inside the card */
+.card h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+}
+
+/* Small paragraph under headings */
+.card p {
+  margin: 0 0 12px 0;
+  color: #4b4b4b;
+  font-size: 0.95rem;
+}
+
+/* Labels display as block so each sits above its input */
+label {
+  display: block;
+  margin: 8px 0 6px 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Inputs fill the card width and have padding (box model) */
+.input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid rgb(164, 255, 183);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Submit button: full width and visually distinct */
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background-color: rgb(5, 170, 101);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Small link style */
+.link {
+  color: rgb(5, 170, 101);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Make the card slightly narrower on small screens */
+@media (max-width: 360px) {
+  .card { width: 92%; padding: 14px; }
+}

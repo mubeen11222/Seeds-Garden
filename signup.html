@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seeds Garden - Signup</title>
+  <link rel="stylesheet" href="Styling.css">
+</head>
+<body>
+  <h1>Welcome to Seeds Garden</h1>
+  <p>Please create your account</p>
+
+  <div class="card">
+    <h2 style="color:rgb(5, 170, 101)">Create Account</h2>
+    <p>Please enter your details</p>
+
+    <form action="signup.php" method="post">
+      <label for="su-username"><b>Username:</b></label>
+      <input class="input" type="text" id="su-username" name="username" required>
+
+      <label for="email"><b>Email:</b></label>
+      <input class="input" type="email" id="email" name="email" required>
+
+      <label for="su-password"><b>Create Password:</b></label>
+      <input class="input" type="password" id="su-password" name="password" required>
+
+      <label for="confirm-password"><b>Confirm Password:</b></label>
+      <input class="input" type="password" id="confirm-password" name="confirm_password" required>
+
+      <input type="submit" value="Create Account" class="button">
+    </form>
+
+    <p>Already have an account? <a href="index.html" class="link">Login</a></p>
+  </div>
+</body>
+</html>

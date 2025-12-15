@@ -2,25 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Order Details | Seeds Garden</title>
-  <link rel="stylesheet" href="Styling.css">
+  <title>Checkout | Seeds Garden</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4fff4;
+      margin: 0;
+    }
+
+    .header {
+      background: #27ae60;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #2e7d32;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    input, textarea, select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button, .btn {
+      background: #27ae60;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    button:hover, .btn:hover {
+      background: #1e8449;
+    }
+
+    .btn.secondary {
+      background: #555;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>🌱 Seeds Garden</h1>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Seeds Garden</h1>
+  </div>
+
+  <!-- ORDER DETAILS -->
+  <div class="card" id="orderPage">
     <h2>Delivery Details</h2>
 
-    <form action="thankUpage.html">
-      <label>Phone Number</label>
-      <input type="tel" placeholder="Enter phone number" required>
+    <form onsubmit="goToPayment(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <textarea placeholder="Delivery Address" required></textarea>
 
-      <label>Delivery Address</label>
-      <textarea placeholder="Enter full address" required></textarea>
+      <select id="paymentMethod" required>
+        <option value="">Select Payment Method</option>
+        <option value="cash">Cash on Delivery</option>
+        <option value="card">Card Payment</option>
+      </select>
 
-      <button type="submit">Confirm Payment</button>
+      <button type="submit">Proceed</button>
     </form>
   </div>
 
+  <!-- CARD PAYMENT PAGE -->
+  <div class="card hidden" id="cardPage">
+    <h2>Card Payment</h2>
+
+    <form onsubmit="confirmCardPayment(event)">
+      <input type="text" placeholder="Card Holder Name" required>
+      <input type="text" placeholder="Card Number" required>
+      <input type="text" placeholder="Expiry Date (MM/YY)" required>
+      <input type="password" placeholder="CVV" required>
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+
+  <!-- THANK YOU PAGE -->
+  <div class="card hidden" id="thankYouPage">
+    <h2>🌱 Thank You for Your Purchase!</h2>
+    <p>Your order has been successfully placed.</p>
+    <p>We will deliver your seeds soon.</p>
+
+    <a href="Products.html" class="btn">Continue Shopping</a>
+    <a href="homepage.html" class="btn secondary">Back to Home</a>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function goToPayment(event) {
+      event.preventDefault();
+
+      const method = document.getElementById("paymentMethod").value;
+
+      document.getElementById("orderPage").classList.add("hidden");
+
+      if (method === "card") {
+        document.getElementById("cardPage").classList.remove("hidden");
+      } else {
+        document.getElementById("thankYouPage").classList.remove("hidden");
+      }
+    }
+
+    function confirmCardPayment(event) {
+      event.preventDefault();
+
+      document.getElementById("cardPage").classList.add("hidden");
+      document.getElementById("thankYouPage").classList.remove("hidden");
+    }
+  </script>
+
 </body>
 </html>
+

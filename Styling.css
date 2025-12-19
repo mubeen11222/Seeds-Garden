@@ -58,6 +58,7 @@ label {
 
 /* Submit button: full width and visually distinct */
 .button {
+  text-decoration: none;
   display: block;
   width: 100%;
   padding: 10px;

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #0aa85f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fffaf0;
+    padding: 10px;
+    text-align: left;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    color: #0aa85f;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fffaf0;
+    padding: 40px;
+    text-align: center;
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+/* Mission & Vision */
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    background-color: #fef6eb;
+}
+
+.info-box {
+    background-color: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    color: #0aa85f;
+}
+
+/* Developers */
+.developers-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #fffaf0;
+}
+
+.developers {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.dev-card {
+    background-color: white;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.dev-card h4 {
+    margin-bottom: 8px;
+    color: #0aa85f;
+}
+
+/* Footer */
+.footer {
+    background-color: #0aa85f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
